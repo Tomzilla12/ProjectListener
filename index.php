@@ -11,15 +11,14 @@
     <div class="main">
       <?php
       $dirs = array_filter(glob('../*'), 'is_dir');
-      $pattern = '/^assets$/';
       foreach($dirs as $dir) {
-        if (!preg_match($pattern, $dir)) {
-          print("<a href=\"$dir\">
-          <div class=\"project\">
-            <h4 class=\"text\">$dir</h4>
-          </div>
-        </a>");
-        }
+        $dirName = substr($dir, 3);
+        print("<a href=\"$dir\">
+        <div class=\"project\">
+          <h4 class=\"text\">$dirName</h4>
+        </div>
+      </a>
+      ");
       }
       ?>
 
