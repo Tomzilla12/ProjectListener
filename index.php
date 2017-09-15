@@ -10,7 +10,7 @@
   <body>
     <div class="main">
       <?php
-      $dirs = array_filter(glob('*'), 'is_dir');
+      $dirs = array_filter(glob('../*'), 'is_dir');
       $pattern = '/^assets$/';
       foreach($dirs as $dir) {
         if (!preg_match($pattern, $dir)) {
