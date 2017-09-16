@@ -10,7 +10,7 @@
   <body>
     <div class="main">
       <?php
-      $dirs = array_filter(glob('../*'), 'is_dir');
+      $dirs = array_filter(glob('*'), 'is_dir');
       //$pattern = '/^' . basename(__DIR__) . '$/';
       foreach($dirs as $dir) {
         $dirName = substr($dir, 3);
