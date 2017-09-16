@@ -11,7 +11,7 @@
     <div class="main">
       <?php
       $dirs = array_filter(glob('*'), 'is_dir');
-      //$pattern = '/^' . basename(__DIR__) . '$/';
+      $pattern = '/^assets$/';
       foreach($dirs as $dir) {
         $dirName = substr($dir, 3);
         //if (!preg_match($pattern, $dirName)) {
