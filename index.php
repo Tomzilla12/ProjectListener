@@ -14,12 +14,14 @@
       $pattern = '/^assets$/';
       foreach($dirs as $dir) {
         if (!preg_match($pattern, $dir)) {
-          print("<a href=\"$dir\">
-          <div class=\"project\">
-            <h4 class=\"text\">$dir</h4>
-          </div>
-        </a>
-        ");
+          if ($dir != "private") {
+            print("<a href=\"$dir\">
+              <div class=\"project\">
+                <h4 class=\"text\">$dir</h4>
+              </div>
+            </a>
+            ");
+          }
         }
       }
       ?>
