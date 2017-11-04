@@ -14,7 +14,7 @@
       $pattern = '/^assets$/';
       foreach($dirs as $dir) {
         if (!preg_match($pattern, $dir)) {
-          if ($dir != "private") {
+          if ($dir != "private" && $dir != "ignore") {
             print("<a href=\"$dir\">
               <div class=\"project\">
                 <h4 class=\"text\">$dir</h4>
